@@ -4,40 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <link
+    rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.15.2/css/all.css"/>
+
     <title>Document</title>
   </head>
   <body>
-    <div>
-      <input placeholder="Введите логин" />
-      <button>Send</button>
-    </div>
-    <div>
+    <label>
+      <input placeholder="Введите логин" id="searchValue"/>
+      <button id="searchBtn">Send</button>
+    </label>
+    <div id="card">
       <img src="https://git-scm.com/images/logo@2x.png" />
       <h1>Nickname</h1>
       <p>Description</p>
       <nav>
         <div>
-            <i></i>
+          <i class="far fa-map-marker-alt"></i>
             <span>0</span>
             
         </div>
         <div>
-            <i></i>
+          <i class="fad fa-thumbs-up"></i>
             <span>0</span>
             
         </div>
         <div>
-            <i></i>
+          <i class="fad fa-book"></i>
             <span>0</span>
             
         </div>
-        <div>
-            <i></i>
-            <span>0</span>
-            
-        </div>
+
       </nav>
+      <a href="#">Перейти</a>
     </div>
-  </body>
+
+  <div id ="start">Введите логин</div>
+  <div id="load"></div>
   <script src="./main.js"></script>
+  </body>
 </html>
