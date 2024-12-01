@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-color: wheat;
+    }
+    canvas {
+      border: 1px solid black;
+    }
+  </style>
+  <body>
+    <canvas id="canvas"></canvas>
+    <script>
+      const canvas = document.getElementById("canvas");
+      const context = canvas.getContext("2d");
+      canvas.width = 500;
+      canvas.height = 500;
+
+      function circle(color, x, y, fill = false) {
+        context.beginPath();
+        context.arc(x, y, 45, 0, Math.PI * 2, true);
+
+        if (fill) {
+          context.fillStyle = color;
+          context.fill();
+        } else {
+          context.lineWidth = 5;
+          context.strokeStyle = color;
+          context.fillStyle = "black";
+
+          context.fill();
+          context.stroke();
+        }
+      }
+      let current = 0;
+      function generate() {
+        circle("red", 50, 50, current == 0);
+        circle("yellow", 50, 150, current == 1);
+        circle("green", 50, 250, current == 2);
+        current++;
+        if (current > 2) {
+          current = 0;
+        }
+      }
+      setInterval(generate, 1000);
+      // context.lineWidth = 5;
+      // context.strokeStyle = "blue";
+
+      // context.beginPath();
+      // context.moveTo(0,0);
+      // context.lineTo(150, 0);
+      // context.lineTo(150, 150);
+      // context.lineTo(0, 150);
+      // context.lineTo(0,0);
+      // context.stroke();
+
+      // context.fillStyle = "red"
+      // context.beginPath();
+      // context.rect(0, 0, 50, 25)
+      // context.fill();
+
+      // context.fillStyle = "red"
+      // context.beginPath();
+      // context.arc( 75, 75, 20, 0, Math.PI*2, true)
+      // context.fill()
+    </script>
+  </body>
+</html>

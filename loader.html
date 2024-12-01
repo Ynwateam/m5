@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background: black;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .loader{
+        width: 50px;
+        height: 50px;
+        border: 5px solid wheat;
+        border-radius: 50%;
+        border-bottom: 5px solid red;
+        animation-name: rotation;
+        animation-duration: 0.0001s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    @keyframes rotation{
+        to{
+            transform: rotate(0deg);
+        }
+        from{
+            transform: rotate(360deg);
+        }
+    }
+</style>
+<body>
+    <div class="loader"></div>
+</body>
+</html>
